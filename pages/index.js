@@ -1,5 +1,8 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head"
+import Image from "next/image"
+import afrika from "../public/afrika.png"
+import deutschland from "../public/deutschland.png"
+import styles from "../styles/Home.module.css"
 
 export default function Home() {
   return (
@@ -10,56 +13,47 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <div className={styles.afrika}>
+          <div className={styles.title}>
+            <div>
+              <h2>SCHWARZROTGOLD</h2>
+              <h3>Das Magazin der Bundesregierung</h3>
+            </div>
+            <div>
+              <p className={styles.edNumber}>1</p>
+              <p className={styles.year}>2021</p>
+            </div>
+          </div>
+          <div className={styles.contentTable}>
+            <ul>
+              <li>AN IDEEN MANGELT ES IN GHANA NICHT</li>
+              <li>DER FÖRSTER VOM CHAMO-SEE</li>
+              <li>EINDRÜCKE EINES BOTSCHAFTERS</li>
+            </ul>
+          </div>
+          <Image src={afrika} alt="Afrika Perspektive" />
+        </div>
+        <div className={styles.deutschland}>
+          <div className={styles.title}>
+            <div>
+              <h2>SCHWARZROTGRAU</h2>
+              <h3>Das andere Magazin der Bundesregierung</h3>
+            </div>
+            <div>
+              <p className={styles.edNumber}>1</p>
+              <p className={styles.year}>2021</p>
+            </div>
+          </div>
+          <div className={styles.contentTable}>
+            <ul>
+              <li>AN IDEEN MANGELT ES IN CATASTRP-RAUXEL NICHT</li>
+              <li>DER FÖRSTER VOM WANNSEE</li>
+              <li>EINDRÜCKE EINES GASTAREITERS</li>
+            </ul>
+          </div>
+          <Image src={deutschland} alt="Deutschland Perspektive" />
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
     </div>
   )
 }
