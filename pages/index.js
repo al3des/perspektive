@@ -14,13 +14,13 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.afrika}>
-          <div className={styles.title}>
-            <div>
+          <div className={styles.header}>
+            <div className={styles.title}>
               <h2>SCHWARZROTGOLD</h2>
               <h3>Das Magazin der Bundesregierung</h3>
             </div>
-            <div>
-              <p className={styles.edNumber}>1</p>
+            <div className={styles.edNumber}>
+              <p className={styles.number}>1</p>
               <p className={styles.year}>2021</p>
             </div>
           </div>
@@ -34,13 +34,13 @@ export default function Home() {
           <Image src={afrika} alt="Afrika Perspektive" />
         </div>
         <div className={styles.deutschland}>
-          <div className={styles.title}>
-            <div>
+          <div className={styles.header}>
+            <div className={styles.title}>
               <h2>SCHWARZROTGRAU</h2>
               <h3>Das andere Magazin der Bundesregierung</h3>
             </div>
-            <div>
-              <p className={styles.edNumber}>1</p>
+            <div className={styles.edNumber}>
+              <p className={styles.number}>1</p>
               <p className={styles.year}>2021</p>
             </div>
           </div>

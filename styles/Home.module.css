@@ -5,41 +5,49 @@
 }
 
 .main {
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 3em;
 }
 
-.main .title {
+.header {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-style: italic;
   display: grid;
-  grid-template-columns: 3fr max-content;
-  width: 80%;
+  justify-content: stretch;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
 }
 
-.main .title h2 {
+.header .title {
+  column-span: 2;
+}
+
+.header h2 {
   font-size: 2.5em;
   margin-bottom: 0;
 }
 
-.main .title h3 {
+.header h3 {
   font-size: 1em;
   margin: 0;
 }
 
-.main .title p {
+.header p {
   margin: 0;
 }
 
-.main .title .edNumber {
+.edNumber {
+  grid-column: -1;
+}
+
+.edNumber .number {
+  position: relative;
   font-size: 4em;
   font-weight: bold;
   font-style: normal;
-  position: relative;
 }
 
-.main .title .edNumber::after {
+.edNumber .number::after {
   content: "";
   width: 100%;
   position: absolute;
@@ -49,30 +57,27 @@
   border: 1px solid black; /* Change container border */
 }
 
-.main .title .year {
+.edNumber .year {
   font-weight: bold;
 }
 
 .main .contentTable {
   display: grid;
-  justify-content: flex-end;
-  /* width: 50%; */
+  justify-items: flex-end;
+  grid-template-columns: repeat(4, minmax(80px, 1fr));
 }
 
 .main .contentTable ul {
+  grid-column: -1;
+  width: 80%;
   text-transform: uppercase;
   margin-top: 2em;
   text-align: right;
   font-style: italic;
-  /* width: 40%; */
-  /* display: flex;
-  flex-direction: column; */
-  /* align-content: flex-end; */
 }
 
 .main .contentTable li {
   position: relative;
-  width: 50%;
   margin-bottom: 1em;
 }
 
